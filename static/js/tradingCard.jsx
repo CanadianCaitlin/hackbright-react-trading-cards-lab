@@ -12,7 +12,7 @@ function TradingCard(props) {
     <div className="card">
       <h2>Name: {props.name}</h2>
       <img src={props.imgUrl} />
-      <h2>Skill: </h2>
+      <h2>Skill: {props.skill}</h2>
     </div>
   );
 }
@@ -48,4 +48,15 @@ ReactDOM.render(
     />
   ),
   document.querySelector('#llambda')
+);
+
+ReactDOM.render(
+  (
+    <TradingCard
+      name="Merge"
+      skill="merging traffic"
+      imgURL="/static/img/float.jpg"
+    />
+  ),
+  document.querySelector('#merge')
 );
